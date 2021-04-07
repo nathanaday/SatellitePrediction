@@ -59,7 +59,9 @@ program's core functionality.
 
 The easiest way to reference observations is to look at the .csv file. 
 
-[image](https://user-images.githubusercontent.com/79942554/113796020-0f296800-9703-11eb-934d-9553d7fe69be.png)
+
+![Screen Shot 2021-04-06 at 6 09 10 PM](https://user-images.githubusercontent.com/79942554/113796069-3a13bc00-9703-11eb-9b3b-24c89793f12a.png)
+
 
 
 Examplantion for output columns:

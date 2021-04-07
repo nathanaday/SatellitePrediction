@@ -4,7 +4,7 @@
 https://github.com/nathanaday/SatellitePrediction/
 
 ### DESCRIPTION
-Generate upcoming satellite viewing opportunities at the user's location, with output observations in 
+Generates upcoming satellite viewing opportunities at the user's location, with output observations in 
 both a sqlite3 database and a .csv file. This program was created using Python 3.9
 
 ### USE

@@ -78,16 +78,16 @@ ISS (ZARYA)	04/06/2021, 20:25:13,	1000.67,	164.77,	20.96
 
 - Column(1): The satellite name exactly as it appears in the TLE file.
 
-- Column(2): The user’s local time at the moment the satellite has the shown range, azimuth, elevation values.
+- Column(2): The user’s local time at the moment the satellite has the shown range, azimuth, elevation values. Here we can 
+- expect the ISS to be visible for 5 minutes, between 20:20 and 20:25.
 
 - Column(3): The range in kilometers between the observation site and the satellite.
 
 - Column(4): The azimuth of the satellite’s location in the sky. 0 degrees is defined as north, so we can see here the ISS
 will be transiting the sky from the Northwest (299) through true west (270) and toward the Southwest (164).
 
-- Column(5): The elevation of the satellite’s location in the sky. 90 degrees is defined at the top of the user's sky, and
-no elevation value will exceed 90 degrees. In this example, we can see the elevation begins around 14 degrees and rises
-to a peak of about 37 degrees.
+- Column(5): The elevation of the satellite’s location in the sky. The top of the user's visual hemisphere is defined as
+90 degrees. In this example, we can see the elevation begins around 11 degrees and rises to a peak of about 43 degrees.
 
 
 ### PROGRAM CONTENTS

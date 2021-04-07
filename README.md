@@ -17,7 +17,7 @@ confirming email, but you should be able to refresh and login without issue)
 
 Step 3: Create New API Key
 
-Step 4: Add new API key to config.py where it says:  elevation_api = 'INSERT_API'
+Step 4: Add new API key to **config.py** where it says:  *elevation_api = 'INSERT_API'*
 
 Step 5: Done, and now the program can access accurate elevation data for your location
 

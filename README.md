@@ -8,21 +8,23 @@ Generate upcoming satellite viewing opportunities at the user's location, with o
 both a sqlite3 database and a .csv file. This program was created using Python 3.9
 
 ### USE
+**To use SatellitePrediction, run Main.py and follow the prompts.**
+
 For accurate results, you must get your own API key to access the elevation-api. It's FREE and takes only a minute.
 
-Step 1: Head to https://elevation-api.io/ and choose Signup/Login at the top
+- Step 1: Head to https://elevation-api.io/ and choose Signup/Login at the top
 
-Step 2: Create account with email and password (requires email verification; sometimes it says there is a problem 
+- Step 2: Create account with email and password (requires email verification; sometimes it says there is a problem 
 confirming email, but you should be able to refresh and login without issue)
 
-Step 3: Create New API Key
+- Step 3: Create New API Key
 
-Step 4: Add new API key to **config.py** where it says:  *elevation_api = 'INSERT_API'*
+- Step 4: Add new API key to **config.py** where it says:  *elevation_api = 'INSERT_API'*
 
-Step 5: Done, and now the program can access accurate elevation data for your location
+- Step 5: Done, and now the program can access accurate elevation data for your location
 
-**(Skipping this process will have the observation site altitude default to 0, which would impair accurate results 
-at higher-altitude locations)**
+*(Skipping this process will have the observation site altitude default to 0, which would impair accurate results 
+at higher-altitude locations)*
 
 
 **Make sure to satisfy package requirements in requirements.txt**
@@ -30,11 +32,16 @@ at higher-altitude locations)**
 `pip install -r requirements.txt`
 
 
-**To use SatellitePrediction, run Main.py and follow the prompts.**
+
 
 
 ### DETAILED USE
-Further explanation for user inputs:
+
+There should be a directory in the project files called */output*. This is where the TLE satellite data, database, and 
+obsfiles will be stored. The directory does not need to contain anything for the program to run, so it can be emptied 
+as often as the user wants.
+
+Further explanation of user inputs:
 
 `Enter observation location (city, street, or nearby landmark...):`
 
@@ -42,43 +49,41 @@ The user can essentially enter anything that would get a hit on google, since it
 open-street-map. The matched geocode location will appear (address, lat, lon, elv, and timezone). If it doesn't 
 look right, the program should be run again, and the user should represent their location in a different context
 
-`(Optional: Enter to skip) Name this site for the output file	Ex: Home, Jakarta, Pikes Peak`
+`(Optional: Enter to skip) Name this site for the output file	    Ex: Home, Jakarta, Pikes Peak`
     
 Whatever the user enters here is appended to the output .csv file. For the example of using "Home" as the site 
 name, the user will see the file "OBS 04-06-2021(Home).csv" appear in /outputs when the program is complete.
 This is especially helpful when creating observation files for multiple sites, but ultimately has no effect on the 
 program's core functionality.
 
-There should be a directory in the project files called '/output'. This is where the TLE satellite data, database, and 
-obsfiles will be stored. The directory does not need to contain anything for the program to run, so it can be emptied 
-as often as the user wants.
 
 The easiest way to reference observations is to look at the .csv file. 
 
-![Screen Shot 2021-04-06 at 5 58 56 PM](https://user-images.githubusercontent.com/79942554/113795485-e0f75880-9701-11eb-80a3-c4bede6dba7b.png)
-
+[image](https://user-images.githubusercontent.com/79942554/113796020-0f296800-9703-11eb-934d-9553d7fe69be.png)
 
 
 Examplantion for output columns:
 
 **Satellite Name,	Time,	Range(km),	Azimuth(deg),	Elevation(deg)**
 
-*ISS (ZARYA),	20:20:40,	1287.19,	297.09,	14.01* 
+ISS (ZARYA)	04/06/2021, 20:20:13,	1458.92,	299.76,	10.87
 
-*ISS (ZARYA),	20:22:20,	734.02,	273.05,	32.79*
+ISS (ZARYA)	04/06/2021, 20:21:53,	860.13,	283.32,	26.39
 
-*ISS (ZARYA),	20:24:00,	659.18,	193.07,	37.78*
+ISS (ZARYA)	04/06/2021, 20:23:33,	602.25,	214.77,	42.9
 
-Column(1): The satellite name exactly as it appears in the TLE file.
+ISS (ZARYA)	04/06/2021, 20:25:13,	1000.67,	164.77,	20.96
 
-Column(2): The user’s local time at the moment the satellite has the shown range, azimuth, elevation values.
+- Column(1): The satellite name exactly as it appears in the TLE file.
 
-Column(3): The range in kilometers between the observation site and the satellite.
+- Column(2): The user’s local time at the moment the satellite has the shown range, azimuth, elevation values.
 
-Column(4): The azimuth of the satellite’s location in the sky. 0 degrees is defined as north, so we can see here the ISS
+- Column(3): The range in kilometers between the observation site and the satellite.
+
+- Column(4): The azimuth of the satellite’s location in the sky. 0 degrees is defined as north, so we can see here the ISS
 will be transiting the sky from the Northwest (297) through true west (270) and toward the Southwest (193).
 
-Column(5): The elevation of the satellite’s location in the sky. 90 degrees is defined at the top of the user's sky, and
+- Column(5): The elevation of the satellite’s location in the sky. 90 degrees is defined at the top of the user's sky, and
 no elevation value will exceed 90 degrees. In this example, we can see the elevation begins around 14 degrees and rises
 to a peak of about 37 degrees.
 

@@ -30,22 +30,24 @@ at higher-altitude locations)**
 `pip install -r requirements.txt`
 
 
-**To use SatellitePrediction, run Main.py and follow the prompts. **
+**To use SatellitePrediction, run Main.py and follow the prompts.**
 
 
 ### DETAILED USE
 Further explanation for user inputs:
 
-1: "Enter observation location (city, street, or nearby landmark...):"
-    The user can essentially enter anything that would get a hit on google, since it's using geopy with Nominatim 
-    open-street-map. The matched geocode location will appear (address, lat, lon, elv, and timezone). If it doesn't 
-    look right, the program should be run again, and the user should represent their location in a different context
+`Enter observation location (city, street, or nearby landmark...):`
 
-2: "(Optional: Enter to skip) Name this site for the output file	Ex: Home, Jakarta, Pikes Peak"
-    Whatever the user enters here is appended to the output .csv file. For the example of using "Home" as the site
-    name, the user will see the file "OBS 04-06-2021(Home).csv" appear in /outputs when the program is complete.
-    This is especially helpful when creating observation files for multiple sites, but ultimately has no effect on the 
-    program's core functionality.
+The user can essentially enter anything that would get a hit on google, since it's using geopy with Nominatim 
+open-street-map. The matched geocode location will appear (address, lat, lon, elv, and timezone). If it doesn't 
+look right, the program should be run again, and the user should represent their location in a different context
+
+`(Optional: Enter to skip) Name this site for the output file	Ex: Home, Jakarta, Pikes Peak`
+    
+Whatever the user enters here is appended to the output .csv file. For the example of using "Home" as the site 
+name, the user will see the file "OBS 04-06-2021(Home).csv" appear in /outputs when the program is complete.
+This is especially helpful when creating observation files for multiple sites, but ultimately has no effect on the 
+program's core functionality.
 
 There should be a directory in the project files called '/output'. This is where the TLE satellite data, database, and 
 obsfiles will be stored. The directory does not need to contain anything for the program to run, so it can be emptied 
@@ -127,4 +129,5 @@ Space Stations: http://celestrak.com/NORAD/elements/stations.txt
 Starlink: http://celestrak.com/NORAD/elements/starlink.txt
 
 ### SUPPORT
-Questions and bugs can be posted on the project's [github page](https://github.com/nathanaday/SatellitePrediction) or emailed to nraday1221@gmail.com
+Questions and bugs can be posted on the project's [github page](https://github.com/nathanaday/SatellitePrediction) or 
+emailed to nraday1221@gmail.com

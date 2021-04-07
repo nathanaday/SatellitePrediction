@@ -26,7 +26,8 @@ at higher-altitude locations)**
 
 
 **Make sure to satisfy package requirements in requirements.txt**
-[pip install -r requirements.txt]
+
+`pip install -r requirements.txt`
 
 
 **To use SatellitePrediction, run Main.py and follow the prompts. **

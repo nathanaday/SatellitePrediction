@@ -4,15 +4,27 @@ Author: Nathan Aday / nraday1221@gmail.com
 [project link]
 
 DESCRIPTION 
-This program produces upcoming satellite viewing opportunities at the user's location, with observations outputted in 
-both a sqlite3 database and a .csv file. It was created using Python 3.9
+Generate upcoming satellite viewing opportunities at the user's location, with observations outputted in 
+both a sqlite3 database and a .csv file. This program was created using Python 3.9
 
 USE
+For accurate results, you must get your own API key to access the elevation-api. It's FREE and takes only a minute.
+
+Step 1: Head to https://elevation-api.io/ and choose Signup/Login at the top
+Step 2: Create account with email and password (requires email verification; sometimes it says there is a problem 
+confirming email, but you should be able to refresh and login without issue)
+Step 3: Create New API Key
+Step 4: Add new API key to config.py where it says:  elevation_api = 'INSERT_API'
+Step 5: Done, and now the program can access accurate elevation data for your location
+(Skipping this process will have the observation site altitude default to 0, which would impair accurate results 
+at higher-altitude locations)
+
 Make sure to satisfy package requirements in requirements.txt
 [pip install -r requirements.txt]
 
 To use SatellitePrediction, run Main.py and follow the prompts. 
 
+DETAILED USE
 Further explanation for user inputs:
 1: "Enter observation location (city, street, or nearby landmark...):"
     The user can essentially enter anything that would get a hit on google, since it's using geopy with Nominatim 

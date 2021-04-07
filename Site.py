@@ -76,10 +76,20 @@ class Site:
         Uses the open-elevation API to make a query with the site's lon and lat, then sets the result as the
         site's altitude attribute.
         """
-        query = (
-            'https://elevation-api.io/api/elevation?points=({},{})&key={}'.format(self.lat, self.lon, config.api_key))
-        r = requests.get(query).json()
-        self.altitude = r["elevations"][0]["elevation"]
+        try:
+            query = ('https://elevation-api.io/api/elevation?points=({},{})&key={}'.format(
+                    self.lat, self.lon, config.elevation_api))
+            r = requests.get(query).json()
+            self.altitude = r["elevations"][0]["elevation"]
+        except KeyError:
+            print('-'*10 + " WARNING " + '-'*10)
+            print("There was a problem retrieving elevation from elevation-api.\n"
+                  "It's possible the API hasn't been added, or was added incorrectly.\n"
+                  "See README for instructions on how to easily link the API with config.py\n"
+                  "The program can continue with a default site altitude of 0km, but note this may produce skewed "
+                  "results in locations at significant altitude")
+            print('-'*10 + " WARNING " + '-'*10)
+            self.altitude = 0
 
     def find_utc_offset(self):
         """

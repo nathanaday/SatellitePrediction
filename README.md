@@ -53,8 +53,9 @@ There should be a directory in the project files called '/output'. This is where
 obsfiles will be stored. The directory does not need to contain anything for the program to run, so it can be emptied 
 as often as the user wants.
 
-The easiest way to reference observations is to look at the .csv file. The observations will be sorted by their start 
-time and contain rows with the following format:
+The easiest way to reference observations is to look at the .csv file. ![Example](https://user-images.githubusercontent.com/79942554/113795173-21a2a200-9701-11eb-96ae-3c0782f6c7c8.png)
+
+Examplantion for output columns:
 
 **Satellite Name,	Time,	Range(km),	Azimuth(deg),	Elevation(deg)**
 

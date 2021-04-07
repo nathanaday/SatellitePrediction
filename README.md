@@ -1,13 +1,13 @@
-SatellitePrediction [Version]
+SatellitePrediction [Version 1]
 Python 3.9
 Author: Nathan Aday / nraday1221@gmail.com
-[project link]
+https://github.com/nathanaday/SatellitePrediction/
 
-DESCRIPTION 
+**DESCRIPTION** 
 Generate upcoming satellite viewing opportunities at the user's location, with observations outputted in 
 both a sqlite3 database and a .csv file. This program was created using Python 3.9
 
-USE
+**USE**
 For accurate results, you must get your own API key to access the elevation-api. It's FREE and takes only a minute.
 
 Step 1: Head to https://elevation-api.io/ and choose Signup/Login at the top
@@ -24,7 +24,7 @@ Make sure to satisfy package requirements in requirements.txt
 
 To use SatellitePrediction, run Main.py and follow the prompts. 
 
-DETAILED USE
+**DETAILED USE**
 Further explanation for user inputs:
 1: "Enter observation location (city, street, or nearby landmark...):"
     The user can essentially enter anything that would get a hit on google, since it's using geopy with Nominatim 
@@ -44,12 +44,14 @@ as often as the user wants.
 The easiest way to reference observations is to look at the .csv file. The observations will be sorted by their start 
 time and contain rows with the following format:
 
-------------------------------------------------------------------------------
-Satellite Name      Time        Range(km)      Azimuth(deg)     Elevation(deg)
-ISS (ZARYA)         20:20:40    1287.19        297.09           14.01 
-ISS (ZARYA)         20:22:20    734.02         273.05           32.79 
-ISS (ZARYA)         20:24:00    659.18         193.07           37.78
-------------------------------------------------------------------------------
+Columns: Satellite Name,	Time,	Range(km),	Azimuth(deg),	Elevation(deg)
+
+Row 2: 		ISS (ZARYA),	20:20:40,	1287.19,	297.09,	14.01 
+
+Row 3: 		ISS (ZARYA),	20:22:20,	734.02,	273.05,	32.79 
+
+Row 4: 		ISS (ZARYA),	20:24:00,	659.18,	193.07,	37.78
+
 Column(1): The satellite name exactly as it appears in the TLE file.
 
 Column(2): The user’s local time at the moment the satellite has the shown range, azimuth, elevation values.
@@ -64,7 +66,7 @@ no elevation value will exceed 90 degrees. In this example, we can see the eleva
 to a peak of about 37 degrees.
 
 
-PROGRAM CONTENTS
+**PROGRAM CONTENTS**
 README.md 
 requirements.txt 
 config.py 
@@ -76,7 +78,7 @@ Satellite.py
 Site.py
 
 
-ADDITIONAL DETAIL
+**ADDITIONAL DETAIL**
 The satellite information comes from a two-line element (TLE) file compiled from NORAD data and hosted
 on https://www.celestrak.com/NORAD/elements/. The TLEs on celestrack are updated several times a day, and the program
 downloads the file at the beginning of every run. Therefore, the satellite data used within the program is always up to
@@ -90,7 +92,7 @@ the assorted bright list. There are still a variety of reasons why a satellite p
 from weather to light-pollution.
 
 
-RESOURCES AND EXTENDED USE
+**RESOURCES AND EXTENDED USE**
 The propagation methods used in this software are an application of the technqiues outlined in David A. Vallados’ 
 Fundamentals of Astrodynamics and Applications, Four Edition.
 
@@ -100,9 +102,9 @@ see celestrack.com.
 Changing what satellites this program propagates is as easy as changing the url in the download_tle() method located in
 Data.py. Here are some URLs for quick reference:
 
-Last 30 days launches:    http://celestrak.com/NORAD/elements/tle-new.txt
-Space Stations:    http://celestrak.com/NORAD/elements/stations.txt
-Starlink:    http://celestrak.com/NORAD/elements/starlink.txt
+Last 30 days launches: http://celestrak.com/NORAD/elements/tle-new.txt
+Space Stations: http://celestrak.com/NORAD/elements/stations.txt
+Starlink: http://celestrak.com/NORAD/elements/starlink.txt
 
-SUPPORT
-Questions and bugs can be posted on the project's github page [link] or emailed to nraday1221@gmail.com
+**SUPPORT**
+Questions and bugs can be posted on the project's github page [https://github.com/nathanaday/SatellitePrediction] or emailed to nraday1221@gmail.com

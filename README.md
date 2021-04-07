@@ -110,7 +110,7 @@ Satellite.py
 Site.py
 
 
-### ADDITIONAL DETAIL
+### ADDITIONAL DETAILS
 The satellite information comes from a two-line element (TLE) file compiled from NORAD data and hosted
 on https://www.celestrak.com/NORAD/elements/. The TLEs on celestrack are updated several times a day, and the program
 downloads the file at the beginning of every run. Therefore, the satellite data used within the program is always up to

@@ -79,7 +79,7 @@ ISS (ZARYA)	04/06/2021, 20:25:13,	1000.67,	164.77,	20.96
 - Column(1): The satellite name exactly as it appears in the TLE file.
 
 - Column(2): The user’s local time at the moment the satellite has the shown range, azimuth, elevation values. Here we can 
-- expect the ISS to be visible for 5 minutes, between 20:20 and 20:25.
+expect the ISS to be visible for 5 minutes, between 20:20 and 20:25.
 
 - Column(3): The range in kilometers between the observation site and the satellite.
 

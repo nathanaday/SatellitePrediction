@@ -55,7 +55,8 @@ as often as the user wants.
 
 The easiest way to reference observations is to look at the .csv file. 
 
-![Screen Shot 2021-04-06 at 5 56 29 PM](https://user-images.githubusercontent.com/79942554/113795319-6fb7a580-9701-11eb-98c6-b68a80050148.png)
+![Screen Shot 2021-04-06 at 5 58 56 PM](https://user-images.githubusercontent.com/79942554/113795485-e0f75880-9701-11eb-80a3-c4bede6dba7b.png)
+
 
 
 Examplantion for output columns:

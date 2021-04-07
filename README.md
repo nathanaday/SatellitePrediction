@@ -9,6 +9,7 @@ both a sqlite3 database and a .csv file. This program was created using Python 3
 
 ### USE
 **To use SatellitePrediction, run Main.py and follow the prompts.**
+`>>> python3 Main.py`
 
 For accurate results, you must get your own API key to access the elevation-api. It's FREE and takes only a minute.
 

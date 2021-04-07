@@ -3,11 +3,11 @@
 ## Author: Nathan Aday / nraday1221@gmail.com
 https://github.com/nathanaday/SatellitePrediction/
 
-##### DESCRIPTION
+### DESCRIPTION
 Generate upcoming satellite viewing opportunities at the user's location, with output observations in 
 both a sqlite3 database and a .csv file. This program was created using Python 3.9
 
-##### USE
+### USE
 For accurate results, you must get your own API key to access the elevation-api. It's FREE and takes only a minute.
 
 Step 1: Head to https://elevation-api.io/ and choose Signup/Login at the top
@@ -32,7 +32,7 @@ at higher-altitude locations)**
 **To use SatellitePrediction, run Main.py and follow the prompts. **
 
 
-##### DETAILED USE
+### DETAILED USE
 Further explanation for user inputs:
 
 1: "Enter observation location (city, street, or nearby landmark...):"
@@ -75,7 +75,7 @@ no elevation value will exceed 90 degrees. In this example, we can see the eleva
 to a peak of about 37 degrees.
 
 
-##### PROGRAM CONTENTS
+### PROGRAM CONTENTS
 README.md 
 
 requirements.txt 
@@ -95,7 +95,7 @@ Satellite.py
 Site.py
 
 
-##### ADDITIONAL DETAIL
+### ADDITIONAL DETAIL
 The satellite information comes from a two-line element (TLE) file compiled from NORAD data and hosted
 on https://www.celestrak.com/NORAD/elements/. The TLEs on celestrack are updated several times a day, and the program
 downloads the file at the beginning of every run. Therefore, the satellite data used within the program is always up to
@@ -109,7 +109,7 @@ the assorted bright list. There are still a variety of reasons why a satellite p
 from weather to light-pollution.
 
 
-##### RESOURCES AND EXTENDED USE
+### RESOURCES AND EXTENDED USE
 The propagation methods used in this software are an application of the technqiues outlined in David A. Vallados’ 
 Fundamentals of Astrodynamics and Applications, Four Edition.
 
@@ -125,5 +125,5 @@ Space Stations: http://celestrak.com/NORAD/elements/stations.txt
 
 Starlink: http://celestrak.com/NORAD/elements/starlink.txt
 
-##### SUPPORT
+### SUPPORT
 Questions and bugs can be posted on the project's [github page](https://github.com/nathanaday/SatellitePrediction) or emailed to nraday1221@gmail.com

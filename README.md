@@ -53,7 +53,10 @@ There should be a directory in the project files called '/output'. This is where
 obsfiles will be stored. The directory does not need to contain anything for the program to run, so it can be emptied 
 as often as the user wants.
 
-The easiest way to reference observations is to look at the .csv file. ![Example](https://user-images.githubusercontent.com/79942554/113795173-21a2a200-9701-11eb-96ae-3c0782f6c7c8.png)
+The easiest way to reference observations is to look at the .csv file. 
+
+![Screen Shot 2021-04-06 at 5 56 29 PM](https://user-images.githubusercontent.com/79942554/113795319-6fb7a580-9701-11eb-98c6-b68a80050148.png)
+
 
 Examplantion for output columns:
 

@@ -12,7 +12,7 @@ both a sqlite3 database and a .csv file. This program was created using Python 3
 
 For accurate results, you must get your own API key to access the elevation-api. It's FREE and takes only a minute.
 
-- Step 1: Head to https://elevation-api.io/ and choose Signup/Login at the top
+- Step 1: Go to https://elevation-api.io/ and choose Signup/Login at the top
 
 - Step 2: Create account with email and password (requires email verification; sometimes it says there is a problem 
 confirming email, but you should be able to refresh and login without issue)

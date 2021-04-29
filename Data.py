@@ -186,8 +186,8 @@ def save_observations(site: Site, obs_list: list[Observation], filename: str, ne
         obs_writer.writerow([str(site.obs_location)])
         obs_writer.writerow(['Satellite Name', 'Time', 'Range (km)', 'Azimuth (deg)', 'Elevation (deg)'])
 
-        for site, name, pass_number, jd, time, range, azimuth, elevation in data:
-            obs_writer.writerow([name, time, round(range, 2), round(azimuth, 2), round(elevation, 2)])
+        for site, name, pass_number, jd, time, sat_range, azimuth, elevation in data:
+            obs_writer.writerow([name, time, round(sat_range, 2), round(azimuth, 2), round(elevation, 2)])
 
         print("\nObservation details saved to:\n" + filename + '.csv')
 

@@ -1,4 +1,3 @@
-import config
 import Data
 import datetime
 from geopy.geocoders import Nominatim
@@ -27,7 +26,7 @@ def main():
     5. Saves observations
         All predicted opportunities are saved to a sqlite3 database and a .csv file
     """
-
+    print("Building directories and downloading TLEs...")
     # Confirming the `outputs` directory exists
     cwd_path = os.getcwd()
     Path(cwd_path + '/outputs').mkdir(parents=False, exist_ok=True)

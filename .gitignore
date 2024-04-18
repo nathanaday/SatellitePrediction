@@ -4,3 +4,5 @@ testing_config.py
 *.txt
 *.csv
 *.sqlite
+.idea
+__pycache__

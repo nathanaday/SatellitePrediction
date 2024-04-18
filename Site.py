@@ -77,16 +77,17 @@ class Site:
         site's altitude attribute.
         """
         try:
-            query = ('https://elevation-api.io/api/elevation?points=({},{})&key={}'.format(
-                    self.lat, self.lon, config.elevation_api))
+            query = ('https://api.open-elevation.com/api/v1/lookup?locations={},{}'.format(self.lat, self.lon))
             r = requests.get(query).json()
-            self.altitude = r["elevations"][0]["elevation"]
-        except KeyError:
+            results = r.get("results")
+            if len(results) != 0:
+                self.altitude = results[0].get("elevation")
+            else:
+                raise ValueError("Open elevation API did not return a valid response")
+        except (KeyError, ValueError, requests.exceptions.ConnectionError):
             print('-'*10 + " WARNING " + '-'*10)
-            print("There was a problem retrieving elevation from elevation-api.\n"
-                  "It's possible the API hasn't been added, or was added incorrectly.\n"
-                  "See README for instructions on how to easily link the API with config.py\n"
-                  "The program can continue with a default site altitude of 0km, but note this may produce skewed "
+            print("There was a problem retrieving elevation from the open elevation API.\n"
+                  "The program can continue with a default site altitude of 0km, but this may produce skewed "
                   "results in locations at significant altitude")
             print('-'*10 + " WARNING " + '-'*10)
             self.altitude = 0

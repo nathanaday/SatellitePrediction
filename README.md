@@ -1,7 +1,10 @@
 # SatellitePrediction
-## Python 3.9
-## Author: Nathan Aday / nraday1221@gmail.com
-https://github.com/nathanaday/SatellitePrediction/
+
+
+
+https://github.com/nathanaday/SatellitePrediction/assets/79942554/cca31611-df10-4dde-a17d-edc408ce9e77
+
+
 
 ### DESCRIPTION
 Generates upcoming satellite viewing opportunities at the user's location, with output observations in 

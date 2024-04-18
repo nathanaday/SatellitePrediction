@@ -1,3 +1,6 @@
 # Project exclude paths
 /venv/
 testing_config.py
+*.txt
+*.csv
+*.sqlite
